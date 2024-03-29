@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public float speed = 15f;
     public float xRange = 10f;
     public GameObject[] foodPrefab;
+    public float foodTimer = 0.2f;
+    private float foodTimerCounter = 0f;
     void Start()
     {
         
@@ -18,8 +20,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Movement();
-        if(Input.GetKeyDown(KeyCode.Space))
+        foodTimerCounter -= Time.deltaTime;
+
+        if(Input.GetKeyDown(KeyCode.Space)&&foodTimerCounter<0)
         {
+            foodTimerCounter = foodTimer;
             int i = Random.Range(0, foodPrefab.Length );
             Instantiate(foodPrefab[i], new Vector3(transform.position.x,1,transform.position.z), foodPrefab[i].transform.rotation);
         }

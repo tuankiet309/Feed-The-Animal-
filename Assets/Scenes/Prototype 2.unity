@@ -145,6 +145,7 @@ MonoBehaviour:
   foodPrefab:
   - {fileID: 3566868665520466246, guid: 8b37f8449afe5124181c1887572501d4, type: 3}
   - {fileID: 1215201778196250693, guid: eb07fd0a4f8496c43a799bd21165d7f2, type: 3}
+  foodTimer: 0.2
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,8 +658,8 @@ MonoBehaviour:
   - {fileID: 3420549381355577225, guid: c6047a654507797458bf0f7f0482ce16, type: 3}
   xRange: 16
   zRange: 30
-  spawnTime: 1.5
-  delayTime: 1.5
+  spawnTime: 1
+  delayTime: 1
 --- !u!4 &1483008308
 Transform:
   m_ObjectHideFlags: 0

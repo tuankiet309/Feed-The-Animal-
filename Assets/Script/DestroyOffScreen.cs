@@ -16,7 +16,7 @@ public class DestroyOffScreen : MonoBehaviour
     {
         if (transform.position.z > offbound )
             Destroy(gameObject);
-        if (transform.position.x < -6 )
+        if (transform.position.z < -6 )
             Destroy(gameObject);
         
     }
